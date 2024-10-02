@@ -29,15 +29,3 @@ rrr : rra et rrb en même temps.
 
 TO DO !
 
-1) GESTION DU PARSING & ERREUR
-	un argv ou plusieurs argv
-	verifier que l on as que des nombres
-	creer un atol, pour eviter d avoir les extrem int
-	gestion du nombre d argument
-2)	DEGROSSIR L ALGO
-	faire les coups
-	faire tiny sort et sort 2
-	gestion des piles (creation des liste chaine)
-3)	ALGO DE TRI PRICIPAL
-4)	CHECKER
-

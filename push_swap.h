@@ -31,11 +31,23 @@ int wordlen(char *s, int i);
 char **ft_split(char *s);
 
 //algo_utils
-long	ft_atol(const char *s)
+long	ft_atol(const char *s);
+int	stack_len(t_stack_node *stack);
+t_stack_node	*find_last_node(t_stack_node *head);
+
+//free_all
+
+int		error_repetition(t_stack_node *a, int nbr);
+void	error_free(t_stack_node *a, char **av);
+void	free_matrix(char **av);
+void	free_stack(t_stack_node **stack);
+
 
 //push_swap
-t_list *init_stack(char **tab, int i)
-int push_swap(t_list *a)
+void	stack_init(t_stack_node *a, char **av, int n);
+void push_swap(t_stack_node *a);
+void	append_node(t_stack_node *stack, int nbr);
+
 
 
 #endif
