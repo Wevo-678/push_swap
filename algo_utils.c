@@ -6,7 +6,7 @@
 /*   By: mabenet <mabenet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/30 15:10:03 by mabenet           #+#    #+#             */
-/*   Updated: 2024/10/02 10:37:33 by mabenet          ###   ########.fr       */
+/*   Updated: 2024/10/02 15:56:17 by mabenet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,4 +57,13 @@ t_stack_node	*find_last_node(t_stack_node *head)
 	while (head->next)
 		head = head->next;
 	return (head);
+}
+
+void print_stack(t_stack_node *stack)
+{
+	while(stack)
+	{
+		printf("%d\n", stack->value);
+		stack = stack->next;
+	}
 }

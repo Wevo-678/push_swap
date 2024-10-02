@@ -6,7 +6,7 @@
 /*   By: mabenet <mabenet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/02 09:50:09 by mabenet           #+#    #+#             */
-/*   Updated: 2024/10/02 11:11:47 by mabenet          ###   ########.fr       */
+/*   Updated: 2024/10/02 15:39:34 by mabenet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,9 +25,9 @@ int	error_repetition(t_stack_node *a, int nbr)
 	return (0);
 }
 
-void	error_free(t_stack_node **a, char **av)
+void	error_free(t_stack_node *a, char **av)
 {
-	free_stack(a);
+	free_stack(&a);
 	free_matrix(av);
 	write(2, "Error\n", 6);
 	exit(1);
@@ -60,5 +60,5 @@ void	free_stack(t_stack_node **stack)
 		free(current);
 		current = tmp;
 	}
-	*stack = NULL;
+	stack = NULL;
 }

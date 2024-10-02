@@ -34,6 +34,7 @@ char **ft_split(char *s);
 long	ft_atol(const char *s);
 int	stack_len(t_stack_node *stack);
 t_stack_node	*find_last_node(t_stack_node *head);
+void print_stack(t_stack_node *stack);
 
 //free_all
 
