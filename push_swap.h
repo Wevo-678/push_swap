@@ -39,15 +39,15 @@ void print_stack(t_stack_node *stack);
 //free_all
 
 int		error_repetition(t_stack_node *a, int nbr);
-void	error_free(t_stack_node *a, char **av);
+void	error_free(t_stack_node *a);
 void	free_matrix(char **av);
 void	free_stack(t_stack_node **stack);
 
 
 //push_swap
-void	stack_init(t_stack_node *a, char **av, int n);
-void push_swap(t_stack_node *a);
-void	append_node(t_stack_node *stack, int nbr);
+void	stack_init(t_stack_node **a, char **av, int n);
+void 	push_swap(t_stack_node *a);
+void	append_node(t_stack_node **stack, int nbr);
 
 
 

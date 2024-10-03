@@ -6,7 +6,7 @@
 /*   By: mabenet <mabenet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/26 12:01:24 by mabenet           #+#    #+#             */
-/*   Updated: 2024/10/02 15:52:13 by mabenet          ###   ########.fr       */
+/*   Updated: 2024/10/03 15:16:45 by mabenet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ int main(int ac, char **av)
 	{
 		if(tab_checker(av, i, ac) == 1)
 		{
-			stack_init(a, av, i);
+			stack_init(&a, av, i);
 			print_stack(a);
 			//push_swap(*a, *b, av);
 		}
