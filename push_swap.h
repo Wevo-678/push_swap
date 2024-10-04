@@ -49,6 +49,27 @@ void	stack_init(t_stack_node **a, char **av, int n);
 void 	push_swap(t_stack_node *a);
 void	append_node(t_stack_node **stack, int nbr);
 
+//push
+void	push(t_stack_node **dest, t_stack_node **src);
+void	pa(t_stack_node **a, t_stack_node **b, bool checker);
+void	pb(t_stack_node **b, t_stack_node **a, bool checker);
 
+//r_rotate
+void	reverse_rotate(t_stack_node **stack);
+void	rra(t_stack_node **a, bool checker);
+void	rrb(t_stack_node **b, bool checker);
+void	rrr(t_stack_node **a, t_stack_node **b, bool checker);
+
+//rotate
+void	rotate(t_stack_node **stack);
+void	ra(t_stack_node **a, bool checker);
+void	rb(t_stack_node **b, bool checker);
+void	rr(t_stack_node **a, t_stack_node **b, bool checker);
+
+//swap
+void	swap(t_stack_node **head);
+void	sa(t_stack_node	**a, bool checker);
+void	sb(t_stack_node **b, bool checker);
+void	ss(t_stack_node **a, t_stack_node **b, bool checker);
 
 #endif
