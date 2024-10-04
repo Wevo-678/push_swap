@@ -6,7 +6,7 @@
 /*   By: mabenet <mabenet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/30 15:10:03 by mabenet           #+#    #+#             */
-/*   Updated: 2024/10/03 15:16:37 by mabenet          ###   ########.fr       */
+/*   Updated: 2024/10/04 10:50:08 by mabenet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,4 +66,13 @@ void print_stack(t_stack_node *stack)
 		printf("%d\n", stack->value);
 		stack = stack->next;
 	}
+}
+
+void	init_nodes(t_stack_node *a, t_stack_node *b)
+{
+	set_current_position(a);
+	set_current_position(b);
+	set_target_node(a, b);
+	set_price(a, b);
+	set_cheapest(b);
 }

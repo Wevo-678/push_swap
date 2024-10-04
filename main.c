@@ -6,7 +6,7 @@
 /*   By: mabenet <mabenet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/26 12:01:24 by mabenet           #+#    #+#             */
-/*   Updated: 2024/10/03 15:16:45 by mabenet          ###   ########.fr       */
+/*   Updated: 2024/10/04 10:32:18 by mabenet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,13 @@
 int main(int ac, char **av)
 {
 	t_stack_node *a;
-	// t_stack_node *b;
-	// char **tab;
+	t_stack_node *b;
+
 	int i;
 
 	i = 1;
 	a = NULL;
-	// b = NULL;
+	b = NULL;
 	
 	if (ac == 2)
 		{
@@ -36,7 +36,8 @@ int main(int ac, char **av)
 		{
 			stack_init(&a, av, i);
 			print_stack(a);
-			//push_swap(*a, *b, av);
+			push_swap(&a, &b);
+			print_stack(a);
 		}
 		else if(tab_checker(av, i, ac) == 0)
 			printf("Argument Error\n");

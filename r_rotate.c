@@ -6,7 +6,7 @@
 /*   By: mabenet <mabenet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/04 09:04:49 by mabenet           #+#    #+#             */
-/*   Updated: 2024/10/04 09:13:42 by mabenet          ###   ########.fr       */
+/*   Updated: 2024/10/04 10:41:22 by mabenet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,4 +51,15 @@ void	rrr(t_stack_node **a, t_stack_node **b, bool checker)
 	reverse_rotate(b);
 	if (!checker)
 		write(1, "rrr\n", 4);
+}
+
+void	reverse_rotate_both(t_stack_node **a,
+								t_stack_node **b,
+								t_stack_node *cheapest_node)
+{
+	while (*a != cheapest_node->target_node
+		&& *b != cheapest_node)
+		rrr(a, b, false);
+	set_current_position(*a);
+	set_current_position(*b);
 }
