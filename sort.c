@@ -6,7 +6,7 @@
 /*   By: mabenet <mabenet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/01 12:55:50 by mabenet           #+#    #+#             */
-/*   Updated: 2024/10/04 10:46:53 by mabenet          ###   ########.fr       */
+/*   Updated: 2024/10/07 10:09:55 by mabenet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@ void	stack_init(t_stack_node **a, char **av, int n)
 {
 	long	nbr;
 
-	//printf("Adresse initiale du pointeur a: %p\n", (void *)a);
 	while (av[n])
 	{
 		nbr = ft_atol(av[n]);
@@ -24,11 +23,9 @@ void	stack_init(t_stack_node **a, char **av, int n)
 			error_free(*a);
 		if (error_repetition(*a, (int)nbr))
 			error_free(*a);
-		append_node(a, (int)nbr); // On passe le double pointeur ici
-		//printf("Valeur du dernier nœud ajouté: %d\n", (*a)->value); // Affichage de la valeur ajoutée
+		append_node(a, (int)nbr);
 		++n;
 	}
-	//printf("Adresse finale du pointeur a: %p\n", (void *)a);
 }
 
 void	append_node(t_stack_node **stack, int nbr)
@@ -38,13 +35,9 @@ void	append_node(t_stack_node **stack, int nbr)
 
 	node = malloc(sizeof(t_stack_node));
 	if (!node)
-		return; // Toujours vérifier si malloc a réussi
-
+		return ;
 	node->next = NULL;
 	node->value = nbr;
-	// printf("int nbr = %d\n", nbr);
-	// printf("node nbr %d\n", node->value);
-	
 	if (NULL == *stack)
 	{
 		*stack = node;
@@ -55,9 +48,8 @@ void	append_node(t_stack_node **stack, int nbr)
 		last_node = find_last_node(*stack);
 		last_node->next = node;
 		node->prev = last_node;
-	} 
+	}
 }
-
 
 void	push_swap(t_stack_node **a, t_stack_node **b)
 {

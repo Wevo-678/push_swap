@@ -6,15 +6,12 @@
 /*   By: mabenet <mabenet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/04 09:04:49 by mabenet           #+#    #+#             */
-/*   Updated: 2024/10/04 10:41:22 by mabenet          ###   ########.fr       */
+/*   Updated: 2024/10/07 10:07:36 by mabenet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-/*
- * Bottom to top
-*/
 void	reverse_rotate(t_stack_node **stack)
 {
 	t_stack_node	*last;

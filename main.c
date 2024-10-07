@@ -6,43 +6,40 @@
 /*   By: mabenet <mabenet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/26 12:01:24 by mabenet           #+#    #+#             */
-/*   Updated: 2024/10/04 10:32:18 by mabenet          ###   ########.fr       */
+/*   Updated: 2024/10/07 09:55:19 by mabenet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int main(int ac, char **av)
+void	main_reduc(t_stack_node *a, t_stack_node *b, char **av, int i)
 {
-	t_stack_node *a;
-	t_stack_node *b;
+	stack_init(&a, av, i);
+	push_swap(&a, &b);
+}
 
-	int i;
+int	main(int ac, char **av)
+{
+	t_stack_node	*a;
+	t_stack_node	*b;
+	int				i;
 
 	i = 1;
 	a = NULL;
 	b = NULL;
-	
 	if (ac == 2)
-		{
-			ac = countword(av[1]); 
-			av = ft_split(av[1]);
-			i = 0;
-		}
-
+	{
+		ac = countword(av[1]);
+		av = ft_split(av[1]);
+		i = 0;
+	}
 	if (ac >= 2)
 	{
-		if(tab_checker(av, i, ac) == 1)
-		{
-			stack_init(&a, av, i);
-			print_stack(a);
-			push_swap(&a, &b);
-			print_stack(a);
-		}
-		else if(tab_checker(av, i, ac) == 0)
+		if (tab_checker(av, i, ac) == 1)
+			main_reduc(a, b, av, i);
+		else if (tab_checker(av, i, ac) == 0)
 			printf("Argument Error\n");
 	}
 	else
 		printf("Besoin d'une pile de nombres en argument\n");
-	return(0);
 }

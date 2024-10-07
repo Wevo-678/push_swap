@@ -6,18 +6,12 @@
 /*   By: mabenet <mabenet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/04 09:05:49 by mabenet           #+#    #+#             */
-/*   Updated: 2024/10/04 09:13:40 by mabenet          ###   ########.fr       */
+/*   Updated: 2024/10/07 10:06:55 by mabenet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
-
 #include "push_swap.h"
 
-/*
- * Push a node to the top from src to dest
- * 🚨 attention If stack empty (i.e. NULL)
-*/
 void	push(t_stack_node **dest, t_stack_node **src)
 {
 	t_stack_node	*node_to_push;

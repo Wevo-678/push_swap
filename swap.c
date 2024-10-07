@@ -6,16 +6,12 @@
 /*   By: mabenet <mabenet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/04 09:03:25 by mabenet           #+#    #+#             */
-/*   Updated: 2024/10/04 09:13:44 by mabenet          ###   ########.fr       */
+/*   Updated: 2024/10/07 10:10:17 by mabenet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-/*
- * ATTENTION
- * There may be only 2 nodes
-*/
 void	swap(t_stack_node **head)
 {
 	int	len;

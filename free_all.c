@@ -6,7 +6,7 @@
 /*   By: mabenet <mabenet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/02 09:50:09 by mabenet           #+#    #+#             */
-/*   Updated: 2024/10/03 17:45:01 by mabenet          ###   ########.fr       */
+/*   Updated: 2024/10/07 09:42:50 by mabenet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,49 +32,6 @@ void	error_free(t_stack_node *a )
 	exit(1);
 }
 
-// void	free_matrix(char **av)
-// {
-// 	i = -1;
-// 	if (NULL == av || NULL == *av)
-// 		return ;
-// 	while (av[i])
-// 		free(av[i++]);
-// 	free(av - 1);
-// }
-
-// void	free_matrix(char **av) //bonne version
-// {
-// 	int	i;
-
-// 	if (NULL == av || NULL == *av)
-// 		return ;
-// 	i = 0;  // Commencer à 0
-// 	while (av[i])  // Parcourir chaque chaîne
-// 	{
-// 		free(av[i]);
-// 		i++;
-// 	}
-// 	free(av);  // Libérer le tableau de pointeurs lui-même
-// }
-
-
-// void	free_stack(t_stack_node **stack)
-// {
-// 	t_stack_node	*tmp;
-// 	t_stack_node	*current;
-
-// 	if (NULL == stack)
-// 		return ;
-// 	current = *stack;
-// 	while (current)
-// 	{
-// 		tmp = current->next;
-// 		free(current);
-// 		current = tmp;
-// 	}
-// 	stack = NULL;
-// }
-
 void	free_stack(t_stack_node **stack)
 {
 	t_stack_node	*tmp;
@@ -89,5 +46,5 @@ void	free_stack(t_stack_node **stack)
 		free(current);
 		current = tmp;
 	}
-	*stack = NULL;  // Met à jour le pointeur original dans la fonction appelante
+	*stack = NULL;
 }

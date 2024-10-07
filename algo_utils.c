@@ -6,7 +6,7 @@
 /*   By: mabenet <mabenet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/30 15:10:03 by mabenet           #+#    #+#             */
-/*   Updated: 2024/10/04 10:50:08 by mabenet          ###   ########.fr       */
+/*   Updated: 2024/10/07 09:42:13 by mabenet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ long	ft_atol(const char *s)
 
 	nb = 0;
 	sign = 1;
-	while ((*s == ' ' || *s == '\t' || *s == '\n') && *s !='\0')
+	while ((*s == ' ' || *s == '\t' || *s == '\n') && *s != '\0')
 		s++;
 	if (*s == '+' || *s == '-')
 	{
@@ -59,9 +59,9 @@ t_stack_node	*find_last_node(t_stack_node *head)
 	return (head);
 }
 
-void print_stack(t_stack_node *stack)
+void	print_stack(t_stack_node *stack)
 {
-	while(stack)
+	while (stack)
 	{
 		printf("%d\n", stack->value);
 		stack = stack->next;
