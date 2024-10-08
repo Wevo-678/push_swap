@@ -6,7 +6,7 @@
 /*   By: mabenet <mabenet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 08:25:40 by mabenet           #+#    #+#             */
-/*   Updated: 2024/10/07 09:40:41 by mabenet          ###   ########.fr       */
+/*   Updated: 2024/10/08 11:07:39 by mabenet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,6 +55,7 @@ int				error_repetition(t_stack_node *a, int nbr);
 void			error_free(t_stack_node *a);
 void			free_matrix(char **av);
 void			free_stack(t_stack_node **stack);
+void			free_tab(char **tab);
 
 //sort_utils
 t_stack_node	*find_highest(t_stack_node *stack);
@@ -64,7 +65,7 @@ void			set_price(t_stack_node *a, t_stack_node *b);
 void			set_cheapest(t_stack_node *b);
 
 //sort
-void			stack_init(t_stack_node **a, char **av, int n);
+int				stack_init(t_stack_node **a, char **av, int n);
 void			push_swap(t_stack_node **a, t_stack_node **b);
 void			append_node(t_stack_node **stack, int nbr);
 void			tiny_sort(t_stack_node **a);

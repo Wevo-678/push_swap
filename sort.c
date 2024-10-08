@@ -6,13 +6,13 @@
 /*   By: mabenet <mabenet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/01 12:55:50 by mabenet           #+#    #+#             */
-/*   Updated: 2024/10/07 10:09:55 by mabenet          ###   ########.fr       */
+/*   Updated: 2024/10/08 11:33:56 by mabenet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	stack_init(t_stack_node **a, char **av, int n)
+int	stack_init(t_stack_node **a, char **av, int n)
 {
 	long	nbr;
 
@@ -20,12 +20,13 @@ void	stack_init(t_stack_node **a, char **av, int n)
 	{
 		nbr = ft_atol(av[n]);
 		if (nbr > INT_MAX || nbr < INT_MIN)
-			error_free(*a);
+			return (0);
 		if (error_repetition(*a, (int)nbr))
-			error_free(*a);
+			return (0);
 		append_node(a, (int)nbr);
 		++n;
 	}
+	return (1);
 }
 
 void	append_node(t_stack_node **stack, int nbr)
@@ -102,3 +103,4 @@ void	handle_five(t_stack_node **a, t_stack_node **b)
 		pb(b, a, false);
 	}
 }
+//  123 132 231 213 321
